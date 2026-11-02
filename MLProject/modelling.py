@@ -17,7 +17,6 @@ X_test = pd.read_csv(os.path.join(DATA_DIR, "X_test.csv"))
 y_train = pd.read_csv(os.path.join(DATA_DIR, "y_train.csv")).squeeze()
 y_test = pd.read_csv(os.path.join(DATA_DIR, "y_test.csv")).squeeze()
 
-mlflow.set_experiment("Student_Performance_Classification_CI")
 mlflow.sklearn.autolog(log_models=True)
 
 model = RandomForestClassifier(
